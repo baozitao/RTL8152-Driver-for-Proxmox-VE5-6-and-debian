@@ -88,7 +88,7 @@ apt-get -y install dkms build-essential make gcc libelf-dev
 
 
 tar vjxf $PWD/r8152.53.56-2.15.0.tar.bz2
-cd r8152.53.56-2.15.0
+cd r8152-2.15.0
 
 chmod a+x autorun.sh
 ./autorun.sh
