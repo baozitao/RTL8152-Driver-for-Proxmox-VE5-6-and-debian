@@ -1,13 +1,13 @@
 感谢tubaxiaosiji大佬的脚本
 
-更新至2021-02-01官方驱动r8125-9.005.01.tar.bz2
-https://www.realtek.com/zh/component/zoo/category/network-interface-controllers-10-100-1000m-gigabit-ethernet-pci-express-software
+更新至2021-04-29官方驱动r8152.53.56-2.15.0.tar.bz2
+https://www.realtek.com/zh/component/zoo/category/network-interface-controllers-10-100-1000m-gigabit-ethernet-usb-3-0-software
 
 
 ************************************************************************************************************
 
 
-        为Proxmox VE 5/6 快速添加RTL 8125 2.5G网卡驱动,少走点弯路。。。一块由89 RMB TP-link 2.5G 网卡引发的血案。。。       
+        为Proxmox VE 5/6 快速添加RTL 8156 2.5G网卡驱动,少走点弯路。。。一块由95 RMB PDD USB3 2.5G 网卡引发的血案。。。       
 
 
 
@@ -26,7 +26,7 @@ PVE pve-no-subscription repository provided by proxmox.com 【非订阅用户软
 
 Support Proxmox VE 5.0-6.0 (include 6.2.x) 【支持PVE 5.0-6.0 系统，包括6.2.x 】  
 
-r8125-9.003.05.tar.bz2 provided by Realtek.com 【r8125-9.003.05.tar.bz2由Realtek官网提供】
+r8152.53.56-2.15.0.tar.bz2 provided by Realtek.com 【r8152.53.56-2.15.0.tar.bz2由Realtek官网提供】
 
 Support Linux kernel version 2.4 to 5.6   【支持的Linux内核版本，从2.4到5.6】
     
@@ -42,19 +42,19 @@ Support Linux kernel version 2.4 to 5.6   【支持的Linux内核版本，从2.4
 
 3.克隆我的仓库  [Clone my .git]
 
-	root@hostname# git clone https://github.com/uioprr/RTL8125-Driver-for-Proxmox-VE5-6-and-debian.git  
+	root@hostname# git clone https://github.com/dreamteki/RTL8156-Driver-for-Proxmox-VE5-6-and-debian.git  
 
 4.切换到目录	  [Change dir]   
 
-	root@hostname# cd ./RTL8125-Driver-for-Proxmox-VE5-6-and-debian  
+	root@hostname# cd ./RTL8156-Driver-for-Proxmox-VE5-6-and-debian  
 
 5.赋予运行权限   [Chmod]   
 
-	root@hostname# chmod a+x rtl8125_install.sh  
+	root@hostname# chmod a+x rtl8156_install.sh  
 
 6.运行脚本    [Run script in shell]   
 
-	root@hostname# bash rtl8125_install.sh  
+	root@hostname# bash rtl8156_install.sh  
 
 7.等待一会   [Wait for a minutes]...  
 
@@ -62,11 +62,11 @@ Support Linux kernel version 2.4 to 5.6   【支持的Linux内核版本，从2.4
 
 8.检查模块是否已安装加载   [Check kernel module is exist it]   
 
-	root@hostname# lsmod | grep 'r8125'   	
-	出现 r8125字样即安装成功   [If show 'r8125' that is OK!]
+	root@hostname# lsmod | grep 'r8156'   	
+	出现 r8156字样即安装成功   [If show 'r8156' that is OK!]
 	
 	
-9.如果出现  modprobe: ERROR: could not insert r8125: Invalid argument，请重启系统再运行一遍脚本即可。
+9.如果出现  modprobe: ERROR: could not insert r8156: Invalid argument，请重启系统再运行一遍脚本即可。
 		
-[If show modprobe: ERROR: could not insert r8125: Invalid argument appears, please restart the system and run the script again.]        		
+[If show modprobe: ERROR: could not insert r8156: Invalid argument appears, please restart the system and run the script again.]        		
 	
