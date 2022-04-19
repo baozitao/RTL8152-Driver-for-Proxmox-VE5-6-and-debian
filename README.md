@@ -70,3 +70,5 @@ Support Linux kernel version 2.4 to 5.6   【支持的Linux内核版本，从2.4
 		
 [If show modprobe: ERROR: could not insert r8152: Invalid argument appears, please restart the system and run the script again.]        		
 	
+10.lshw -C network 找到你的网卡，查看它的情况，若是DISABLE 则可以ip link set xxxx up（其中xxxx是本网卡的logical name）
+11.然后可以查看其网络速率情况：ethtool enx00e04c680125
